@@ -1,0 +1,24 @@
+{
+  "name": "microsoft-rewards-bot",
+  "version": "1.0.0",
+  "description": "Are you fed up of searching multiple times everyday to meet your Microsoft rewards quota? This bot can do the computer and even mobile searches (through some tweaks) very easily in under 10 minutes. You can do whatever you want during the time.",
+  "main": "rewards.js",
+  "dependencies": {
+    "prompt": "^1.0.0",
+    "puppeteer": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node rewards.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softwaresat/microsoft-rewards-bot.git"
+  },
+  "author": "Satvik Agarwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/softwaresat/microsoft-rewards-bot/issues"
+  },
+  "homepage": "https://github.com/softwaresat/microsoft-rewards-bot#readme"
+}
