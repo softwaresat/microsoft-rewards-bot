@@ -43,7 +43,7 @@ setTimeout(
     for(i=1;i<32;i++){
         
         await page.waitForSelector('#sb_form_q')
-        await page.type('#sb_form_q', 'a', {delay:speed*500});
+        await page.type('#sb_form_q', 'a', {delay:speed*(Math.random*1000)});
         await page.keyboard.press('Enter', {delay:2000},{waitUntil: 'load', timeout: 0});   
 
     }
