@@ -40,7 +40,7 @@ setTimeout(
         await page.click('#idSIButton9', {delay:1000});
     
 
-    for(i=1;i<32;i++){
+    for(i=1;i<35;i++){
         
         await page.waitForSelector('#sb_form_q')
         await page.type('#sb_form_q', 'a', {delay:speed*(Math.random*1000)});
