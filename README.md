@@ -16,7 +16,7 @@ Steps to install and use
 
 Steps to do mobile searches
 1. Go to your text editor of your choice
-2. Open rewards.j3
+2. Open rewards.js
 3. Change the line `const browser =  await puppeteer.launch(); ` to  `const browser =  await puppeteer.launch({headless: false} );` 
 4. Run the program
 5. Inspect the chromium tab after it finishes logging you in and run it in chrome phone mode by clicking this icon that looks like a phone
