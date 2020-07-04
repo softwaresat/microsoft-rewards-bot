@@ -2,8 +2,7 @@ var i;
  var prompt = require('prompt');
  var email;
  var password;
-var speed;
-  //
+var lettertyped;  //
   // Start the prompt
   //
   prompt.start();
@@ -11,25 +10,25 @@ var speed;
   //
   // Get two properties from the user: username and email
   //
-  prompt.get(['email', 'password','speed'], function (err, result) {
+  prompt.get(['email', 'password','lettertyped'], function (err, result) {
     //
     // Log the results.
-    //
+    //  
     console.log('Command-line input received:');
     console.log('  email: ' + result.email);
     console.log('  password: ' + result.password);
-    console.log(" speed: " + result.speed);
+    console.log(" I will type: " + result.lettertyped);
     email = result.email;
     password = result.password;
-    speed = result.speed;
+    lettertyped = result.lettertyped;
   });
   
 
 const puppeteer = require('puppeteer');
 setTimeout(
     async function () {
-        console.log('Currently Logging You In!')
-
+    
+    console.log('Currently Logging You In!')
     const browser =  await puppeteer.launch();    
     const page =  await browser.newPage();
     await page.goto('https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1593542743&rver=6.7.6631.0&wp=MBI_SSL&wreply=https%3a%2f%2fwww.bing.com%2fsecure%2fPassport.aspx%3frequrl%3dhttps%253a%252f%252fwww.bing.com%252fsearch%253fq%253daaaa%2526go%253dSearch%2526qs%253dds%2526form%253dQBRE%2526wlsso%253d1%2526wlexpsignin%253d1%26sig%3d1EB29EC896D9682B3684903197676976&lc=1033&id=264960&CSRFToken=0fac2379-af43-43a7-9152-fc72ff38f12b&aadredir=1')
@@ -41,12 +40,11 @@ setTimeout(
         await page.click('#idSIButton9', {delay:1000});
     
       console.log('Currently Searching!')
-
     for(i=1;i<35;i++){
         
         await page.waitForSelector('#sb_form_q')
-        await page.type('#sb_form_q', 'a', {delay:speed*(Math.random*1000)});
-        await page.keyboard.press('Enter', {delay:2000},{waitUntil: 'load', timeout: 0});   
+        await page.type('#sb_form_q', lettertyped, {delay:Math.random*3000});
+        await page.keyboard.press('Enter', {delay:2000+Math.random()*1200},{waitUntil: 'load', timeout: 0});   
 
     }
     
