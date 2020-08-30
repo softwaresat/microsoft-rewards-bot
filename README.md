@@ -10,9 +10,10 @@ Steps to install and use
 `npm install prompt`
 5. Download the file
 6. Run `node rewards.js` in your terminal.
-7. Put in the credential it asks, you only have 20 seconds to do this and the next step (don't worry, this runs entirely on your computer)
+7. Put in the credential it asks, you only have 25 seconds to do this and the next steps (don't worry, this runs entirely on your computer)
 8. Put in what you want to type (make it one letter or number)
-9. Watch the bot do all your hard work and enjoy :)
+9. Put whether this is a mobile search or not, make sure this is a simple yes or no, no capitalization or mispellings please.
+10. Watch the bot do all your hard work and enjoy :)
 
 Steps to do mobile searches
 1. Go to your text editor of your choice
