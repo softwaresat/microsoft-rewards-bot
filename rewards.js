@@ -1,8 +1,10 @@
 var i;
+var num = 0;
  var prompt = require('prompt');
  var email;
  var password;
-var lettertyped;  //
+var lettertyped; 
+var mobile; //
   // Start the prompt
   //
   prompt.start();
@@ -10,7 +12,7 @@ var lettertyped;  //
   //
   // Get two properties from the user: username and email
   //
-  prompt.get(['email', 'password','lettertyped'], function (err, result) {
+  prompt.get(['email', 'password','lettertyped','mobile'], function (err, result) {
     //
     // Log the results.
     //  
@@ -18,16 +20,23 @@ var lettertyped;  //
     console.log('  email: ' + result.email);
     console.log('  password: ' + result.password);
     console.log(" I will type: " + result.lettertyped);
+    console.log("The search is mobile?:" + result.mobile);
     email = result.email;
     password = result.password;
     lettertyped = result.lettertyped;
+    mobile = result.mobile;
   });
-  
 
 const puppeteer = require('puppeteer');
 setTimeout(
     async function () {
-    
+     
+if(mobile==='yes'){
+  num = 25;
+}
+else{
+  num = 35;
+} 
     console.log('Currently Logging You In!')
     const browser =  await puppeteer.launch();    
     const page =  await browser.newPage();
@@ -42,7 +51,8 @@ setTimeout(
         await page.click('#idSIButton9', {delay:1000});
     
       console.log('Currently Searching!')
-    for(i=1;i<35;i++){
+      console.log('Will search '+ num +" more times!")
+    for(i=1;i<num;i++){
         
         await page.waitForSelector('#sb_form_q')
         await page.type('#sb_form_q', lettertyped, {delay:Math.random*3000});
@@ -54,5 +64,5 @@ setTimeout(
    console.log('Done with the work!')
   await browser.close()
 
-}, 20000)
+}, 25000)
 
