@@ -31,8 +31,8 @@ const puppeteer = require('puppeteer');
 setTimeout(
     async function () {
      
-if(mobile==='yes'){
-  num = 25;
+if(mobile==='yes' || mobile==="YES" || mobile==="Yes"){
+ num = 25;
 }
 else{
   num = 35;
