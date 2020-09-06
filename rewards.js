@@ -57,7 +57,7 @@ else{
       console.log('Currently Searching!')
       console.log('Will search '+ num +" more times!")
     for(i=1;i<num;i++){
-        lettertyped = letters[ Math.floor(Math.floor(Math.random() * 27))];
+        lettertyped = letters[ Math.floor(Math.floor(Math.random() * 25))];
         await page.waitForSelector('#sb_form_q')
         await page.type('#sb_form_q', lettertyped, {delay:Math.random*3000});
         await page.keyboard.press('Enter', {delay:2000+Math.random()*1200},{waitUntil: 'load', timeout: 0});   
