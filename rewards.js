@@ -52,7 +52,9 @@ else{
         //  await page.click('#idChkBx_PWD_KMSI0Pwd',{delay:500})
         await page.click('#idSIButton9',{delay:500})
         await page.waitForSelector('#idSIButton9')
-        await page.click('#idSIButton9', {delay:1000});
+         await page.keyboard.press('Enter')
+
+//         await page.click('#idSIButton9', {delay:1000});
     
       console.log('Currently Searching!')
       console.log('Will search '+ num +" more times!")
