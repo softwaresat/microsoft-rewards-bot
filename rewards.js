@@ -48,6 +48,7 @@ else{
         await page.waitForSelector('#i0116')
         await page.type('#i0116', email)
         await page.keyboard.press('Enter');   
+     await page.waitForSelector('#i0116')
          await page.type('#i0118',password, {delay:500})
         //  await page.click('#idChkBx_PWD_KMSI0Pwd',{delay:500})
         await page.click('#idSIButton9',{delay:500})
